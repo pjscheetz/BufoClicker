@@ -1,0 +1,79 @@
+/* Enhanced tooltip styling with improved transitions */
+.game-tooltip {
+  position: fixed; /* Fixed positioning to avoid positioning issues */
+  z-index: var(--z-index-content);
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none; /* Ensure tooltips don't interfere with mouse events */
+}
+
+.game-tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Keep existing styles for generator elements */
+.owned-generator {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.owned-generator:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.building-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  border: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.generator-left {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.generator-left:active {
+  opacity: 0.8;
+}
+
+/* Add subtle indication for elements that can show tooltips */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  transition: box-shadow 0.2s ease;
+}

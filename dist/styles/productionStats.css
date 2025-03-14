@@ -1,0 +1,181 @@
+/* Panel with notification indicator */
+.panel.has-notification .panel-header {
+    background: linear-gradient(to right, var(--color-accent), var(--color-accent-dark));
+  }
+  
+  /* Production Stats Styling */
+  .production-stats.panel .panel-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .production-stats .stats-container {
+    background-color: #ffffff;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8f0e8;
+  }
+  
+  .production-stats .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .production-stats .stat-item:last-child {
+    border-bottom: none;
+  }
+  
+  .production-stats .stat-label {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .production-stats .stat-value {
+    font-weight: 600;
+    color: #2a9d8f;
+    text-align: right;
+  }
+  
+  .production-stats .contributions {
+    background-color: #ffffff;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8f0e8;
+  }
+  
+  .production-stats .contributions h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .production-stats .contribution-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .production-stats .contribution-item:last-child {
+    border-bottom: none;
+  }
+  
+  .production-stats .contribution-name {
+    font-weight: 500;
+  }
+  
+  .production-stats .contribution-value {
+    color: #2a9d8f;
+    font-weight: 600;
+  }
+  
+  .production-stats .empty-contributions {
+    color: #999;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    font-style: italic;
+  }
+
+  /* Panel with notification indicator */
+.panel.has-notification .panel-header {
+    background: linear-gradient(to right, var(--color-accent), var(--color-accent-dark));
+  }
+  
+  /* Production Stats Styling */
+  .production-stats.panel .panel-content {
+    padding: var(--spacing-lg);
+  }
+  
+  .production-stats .stats-container {
+    background-color: #ffffff;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8f0e8;
+    display: none;
+  }
+  
+  .production-stats .stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .production-stats .stat-item:last-child {
+    border-bottom: none;
+  }
+  
+  .production-stats .stat-label {
+    font-weight: 500;
+    color: #555;
+  }
+  
+  .production-stats .stat-value {
+    font-weight: 600;
+    color: #2a9d8f;
+    text-align: right;
+  }
+  
+  .production-stats .contributions {
+    background-color: #ffffff;
+    border-radius: var(--border-radius-sm);
+    padding: var(--spacing-md);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8f0e8;
+  }
+  
+  .production-stats .contributions h3 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .production-stats .contribution-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px dashed #eee;
+  }
+  
+  .production-stats .contribution-item:last-child {
+    border-bottom: none;
+  }
+  
+  .production-stats .contribution-name {
+    font-weight: 500;
+  }
+  
+  .production-stats .contribution-value {
+    color: #2a9d8f;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .production-stats .contribution-percentage {
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .production-stats .empty-contributions {
+    color: #999;
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    font-style: italic;
+  }

@@ -1,0 +1,165 @@
+/* Defining variables */
+:root {
+    /* Color Variables */
+    --color-primary: #4CAF50;
+    --color-primary-light: #8BC34A;
+    --color-primary-dark: #2E7D32;
+    --color-accent: #FFC107;
+    --color-accent-light: #FFEB3B;
+    --color-accent-dark: #FF9800;
+    --color-success: #4CAF50;
+    --color-warning: #FF9800;
+    --color-error: #F44336;
+    --color-info: #2196F3;
+    
+    --color-text: #333;
+    --color-text-light: #777;
+    --color-text-inverse: #FFF;
+    --color-background: #F5F5F5;
+    --color-surface: #FFF;
+    --color-border: #DDD;
+    
+    /* Spacing Variables */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    
+    /* Font Variables */
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    
+    /* Border Variables */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-width: 1px;
+    
+    /* Shadow Variables */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+    
+    /* Animation Variables */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    
+    /* Z-index Variables */
+    --z-index-base: 1;
+    --z-index-content: 10;
+    --z-index-notification: 100;
+    --z-index-modal: 1000;
+  }
+  
+  /* Reset some default browser styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Import all style modules */
+  @import './layout.css';
+  @import './panel.css';
+  @import './component.css';
+  @import './resourceDisplay.css';
+  @import './animations.css';
+  @import './tooltip.css';
+  @import './modal.css';
+  @import './upgrades.css';
+  @import './achievements.css';
+  @import './productionStats.css';
+  @import './statsModal.css';
+  /* Global styles */
+  body {
+    background-image: url('./../assets/images/background/pond.jpg');
+    font-family: var(--font-family);
+    font-size: var(--font-size-md);
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+  
+  button {
+    cursor: pointer;
+    font-family: inherit;
+    border: none;
+    outline: none;
+  }
+  
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Utility classes */
+  .hidden {
+    display: none !important;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-right {
+    text-align: right;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  .mt-1 { margin-top: var(--spacing-xs); }
+  .mt-2 { margin-top: var(--spacing-sm); }
+  .mt-3 { margin-top: var(--spacing-md); }
+  .mt-4 { margin-top: var(--spacing-lg); }
+  
+  .mb-1 { margin-bottom: var(--spacing-xs); }
+  .mb-2 { margin-bottom: var(--spacing-sm); }
+  .mb-3 { margin-bottom: var(--spacing-md); }
+  .mb-4 { margin-bottom: var(--spacing-lg); }
+
+
+/* Game menu styles */
+.game-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #f0f9f0;
+  border-radius: 8px;
+  border: 1px solid #c8e6c9;
+}
+
+.menu-button {
+  flex: 1;
+  padding: 8px 12px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.menu-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+}

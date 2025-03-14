@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BufoClicker</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/bufo.ico">
+  <!-- CSS Reset to ensure consistent rendering -->
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e6f2e9;
+      line-height: 1.5;
+    }
+  </style>
+  <!-- Import the game's CSS -->
+  <link rel="stylesheet" href="./styles/index.css">
+  <!-- Inline the critical layout CSS to ensure it loads first -->
+  <style>
+    .game-container {
+      margin: 0 auto;
+      padding: 16px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .game-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .three-column-layout {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 16px;
+      width: 100%;
+      flex: 1;
+      min-height: 600px;
+    }
+    .column {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 16px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e0e0e0;
+      overflow-y: auto;
+    }
+    .left-column {
+      flex: 1 !important;
+      min-width: 250px;
+    }
+    .center-column {
+      flex: 1.5 !important;
+      min-width: 300px;
+    }
+    .right-column {
+      flex: 1 !important;
+      min-width: 250px;
+    }
+    @media (max-width: 1024px) {
+      .three-column-layout {
+        flex-direction: column !important;
+      }
+      .column {
+        width: 100%;
+        max-height: none;
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container" class="game-container">
+    <!-- Game header with title -->
+    <header class="game-header">
+      <h1 class="game-title">BufoClicker 2.0</h1>
+    </header>
+
+    <!-- Main content container -->
+    <main class="game-content">
+      <!-- Three-column layout wrapper -->
+      <div class="three-column-layout">
+        <!-- Left column: Click area and stats -->
+        <div class="column left-column">
+          <div id="resource-display" class="resource-display">
+            <div class="resource-count">0</div>
+          </div>
+          
+          <div id="frog-display" class="frog-display">
+            <img src="./assets/images/bufo.png" alt="Bufo" class="bufo-image">
+          </div>
+          
+          <div id="production-stats" class="production-stats panel">
+            <div class="panel-header">
+              <h2>Production Statistics</h2>
+            </div>
+            <div class="panel-content">
+              <div class="stats-container">
+                <div class="stat-item">
+                  <span class="stat-label">Current Production:</span>
+                  <span class="stat-value">0/sec</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Per Minute:</span>
+                  <span class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                  <span class="stat-label">Per Hour:</span>
+                  <span class="stat-value">0</span>
+                </div>
+              </div>
+              
+              <div class="contributions">
+                <h3>Production Sources</h3>
+                <div class="contributions-list">
+                  <div class="empty-contributions">No production sources yet.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Center column: Owned generators ("Your Frogs") -->
+        <div class="column center-column">
+          <div id="owned-generators" class="owned-generators-container panel">
+            <div class="panel-header">
+              <h2>Your Frogs</h2>
+            </div>
+            <div class="panel-content generators-container">
+              <!-- Example generator item (will be replaced by actual data) -->
+              <div class="owned-generator category-basic">
+                <div class="generator-icon">🐸</div>
+                <div class="generator-info">
+                  <div class="generator-name">Tadpole <span class="generator-count">x1</span></div>
+                  <div class="generator-production">0.1/sec</div>
+                </div>
+              </div>
+              
+              <!-- Empty state (shown when no generators) -->
+              <div class="empty-generators">No frogs yet! Buy some from the shop.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: Upgrades and shop -->
+        <div class="column right-column">
+          <div id="upgrades-panel" class="upgrades-panel panel">
+            <div class="panel-header">
+              <h2>Upgrades</h2>
+            </div>
+            <div class="panel-content">
+              <div id="upgrades-container" class="upgrades-grid">
+                <!-- Example upgrade (will be replaced by actual data) -->
+                <div class="upgrade-icon-container">
+                  <button class="upgrade-icon">💪</button>
+                </div>
+                
+                <!-- Empty state (shown when no upgrades) -->
+                <div class="empty-upgrades">No upgrades available yet.</div>
+              </div>
+            </div>
+          </div>
+          
+          <div id="shop-panel" class="shop-panel panel">
+            <div class="panel-header">
+              <h2>Frog Shop</h2>
+            </div>
+            <div class="panel-content">
+              <div id="purchase-controls" class="purchase-controls">
+                <div class="purchase-amount-buttons">
+                  <button class="purchase-amount-button active" data-amount="1">1</button>
+                  <button class="purchase-amount-button" data-amount="10">10</button>
+                  <button class="purchase-amount-button" data-amount="100">100</button>
+                  <button class="purchase-amount-button" data-amount="-1">Max</button>
+                </div>
+              </div>
+              
+              <div id="buildings-container" class="buildings-container">
+                <!-- Example shop item (will be replaced by actual data) -->
+                <div class="building-item">
+                  <div class="generator-row">
+                    <div class="generator-left">
+                      <div class="generator-icon">🐸</div>
+                      <div class="generator-info">
+                        <div class="generator-name-section">
+                          <span class="generator-name">Tadpole</span>
+                          <span class="generator-count">x0</span>
+                        </div>
+                        <div class="generator-production">
+                          0.1/sec per unit
+                        </div>
+                      </div>
+                    </div>
+                    <button class="buy-button">10 bufos</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,238 @@
+{
+  "tadpole": {
+    "id": "tadpole",
+    "name": "Bufo Tadpole",
+    "description": "Tiny bufo tadpoles that produce 0.1 bufos per second",
+    "detailedDescription": "The humble beginning of your bufo empire. These wiggly youngsters are just starting their journey to bufohood.",
+    "iconPath": "./assets/images/generators/bufo-smol.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 0.1,
+    "currentProduction": 0.1,
+    "totalProduction": 0,
+    "baseCost": 10,
+    "currentCost": 10,
+    "costMultiplier": 1.15,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 0 }
+    ],
+    "unlocked": true,
+    "enabled": true,
+    "boosts": []
+  },
+  "froglet": {
+    "id": "froglet",
+    "name": "Bufo Froglet",
+    "description": "Adolescent bufos that produce 1 bufo per second",
+    "detailedDescription": "In-betweeners with legs but still sporting tails. These teenage bufos are eager to prove their worth and contribute to the cause.",
+    "iconPath": "./assets/images/generators/smol-bufo-feels-blessed.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 1,
+    "currentProduction": 1,
+    "totalProduction": 0,
+    "baseCost": 100,
+    "currentCost": 100,
+    "costMultiplier": 1.2,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 50 }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "bufo": {
+    "id": "bufo",
+    "name": "Bufo",
+    "description": "Common bufos that produce 8 bufos per second",
+    "detailedDescription": "Fully matured bufos with impeccable jumping skills. These reliable amphibians form the backbone of your bufo production empire.",
+    "iconPath": "./assets/images/generators/bufo.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 8,
+    "currentProduction": 8,
+    "totalProduction": 0,
+    "baseCost": 1100,
+    "currentCost": 1100,
+    "costMultiplier": 1.25,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 500 }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "giant_bufo": {
+    "id": "giant_bufo",
+    "name": "Giant Bufo",
+    "description": "Massive bufos that produce 47 bufos per second",
+    "detailedDescription": "These enormous amphibians have appetites to match their impressive size. Their deep croaks can be heard across the entire pond network.",
+    "iconPath": "./assets/images/generators/chonky-bufo-wants-to-be-held.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 47,
+    "currentProduction": 47,
+    "totalProduction": 0,
+    "baseCost": 12000,
+    "currentCost": 12000,
+    "costMultiplier": 1.3,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 5000 },
+      { "type": "generators", "value": 10, "target": "bufo" }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "chromatic_bufo": {
+    "id": "chromatic_bufo",
+    "name": "Chromatic Bufo",
+    "description": "Vibrantly colored bufos that produce 260 bufos per second",
+    "detailedDescription": "Their dazzling array of colors serves as nature's warning sign. These specialized bufos have mastered the art of rapid bufo synthesis.",
+    "iconPath": "./assets/images/generators/hypnobufo.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 260,
+    "currentProduction": 260,
+    "totalProduction": 0,
+    "baseCost": 130000,
+    "currentCost": 130000,
+    "costMultiplier": 1.35,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 50000 },
+      { "type": "generators", "value": 5, "target": "giant_bufo" }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "canopy_bufo": {
+    "id": "canopy_bufo",
+    "name": "Canopy Bufo",
+    "description": "Arboreal bufos that produce 1,400 bufos per second",
+    "detailedDescription": "Masters of vertical habitats, these bufos have evolved powerful adhesive toe pads. Their treetop perspective gives them unique insights into bufo production.",
+    "iconPath": "./assets/images/generators/bufo-monstera.png",
+    "category": "basic",
+    "count": 0,
+    "baseProduction": 1400,
+    "currentProduction": 1400,
+    "totalProduction": 0,
+    "baseCost": 1400000,
+    "currentCost": 1400000,
+    "costMultiplier": 1.4,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 500000 }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "prosperity_bufo": {
+    "id": "prosperity_bufo",
+    "name": "Prosperity Bufo",
+    "description": "Robust bufos that produce 7,800 bufos per second",
+    "detailedDescription": "These well-rounded bufos have developed specialized chambers for maximum bufo production. Their optimistic croaks are said to bring good fortune.",
+    "iconPath": "./assets/images/generators/bufo-cash-money.png",
+    "category": "premium",
+    "count": 0,
+    "baseProduction": 7800,
+    "currentProduction": 7800,
+    "totalProduction": 0,
+    "baseCost": 15000000,
+    "currentCost": 15000000,
+    "costMultiplier": 1.45,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 5000000 }
+    ],
+    "unlocked": false,
+    "enabled": true,
+    "boosts": []
+  },
+  "golden_bufo": {
+    "id": "golden_bufo",
+    "name": "Golden Bufo",
+    "description": "Mythical bufos that produce 44,000 bufos per second",
+    "detailedDescription": "These rare specimens shimmer with a metallic luster that defies explanation. Ancient texts speak of their ability to transform resources into prosperity.",
+    "iconPath": "./assets/images/generators/bufo-has-midas-touch.png",
+    "category": "special",
+    "count": 0,
+    "baseProduction": 44000,
+    "currentProduction": 44000,
+    "totalProduction": 0,
+    "baseCost": 170000000,
+    "currentCost": 170000000,
+    "costMultiplier": 1.5,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 50000000 }
+    ],
+    "unlocked": false,
+    "enabled": false,
+    "boosts": []
+  },
+  "cosmic_bufo": {
+    "id": "cosmic_bufo",
+    "name": "Cosmic Bufo",
+    "description": "Interdimensional bufos that produce 260,000 bufos per second",
+    "detailedDescription": "These mysterious amphibians appear to phase in and out of our reality. Their bodies shimmer with what appears to be a reflection of distant stars and nebulae.",
+    "iconPath": "./assets/images/generators/bufo-galaxy-brain.png",
+    "category": "special",
+    "count": 0,
+    "baseProduction": 260000,
+    "currentProduction": 260000,
+    "totalProduction": 0,
+    "baseCost": 1700000000,
+    "currentCost": 1700000000,
+    "costMultiplier": 1.55,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 500000000 },
+      { "type": "generators", "value": 25, "target": "golden_bufo" }
+    ],
+    "unlocked": false,
+    "enabled": false,
+    "boosts": []
+  },
+  "ancient_bufo": {
+    "id": "ancient_bufo",
+    "name": "Ancient Bufo",
+    "description": "Primordial bufos that produce 1,600,000 bufos per second",
+    "detailedDescription": "These timeless beings have witnessed the rise and fall of countless empires. Their wisdom manifests as an unparalleled capacity for bufo generation.",
+    "iconPath": "./assets/images/generators/bufo-old.png",
+    "category": "special",
+    "count": 0,
+    "baseProduction": 1600000,
+    "currentProduction": 1600000,
+    "totalProduction": 0,
+    "baseCost": 20000000000,
+    "currentCost": 20000000000,
+    "costMultiplier": 1.6,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 5000000000 },
+      { "type": "generators", "value": 15, "target": "cosmic_bufo" }
+    ],
+    "unlocked": false,
+    "enabled": false,
+    "boosts": []
+  },
+  "quantum_bufo": {
+    "id": "quantum_bufo",
+    "name": "Quantum Bufo",
+    "description": "Reality-bending bufos that produce 10,000,000 bufos per second",
+    "detailedDescription": "Existing simultaneously in multiple realities, these bufos harvest energy from parallel dimensions. Their very existence challenges our understanding of physics.",
+    "iconPath": "./assets/images/generators/bufo-brain.png",
+    "category": "special",
+    "count": 0,
+    "baseProduction": 10000000,
+    "currentProduction": 10000000,
+    "totalProduction": 0,
+    "baseCost": 250000000000,
+    "currentCost": 250000000000,
+    "costMultiplier": 1.7,
+    "unlockRequirements": [
+      { "type": "bufos", "value": 50000000000 },
+      { "type": "generators", "value": 10, "target": "ancient_bufo" }
+    ],
+    "unlocked": false,
+    "enabled": false,
+    "boosts": []
+  }
+}

@@ -1,0 +1,48 @@
+/* Panel styling for consistent sectioning */
+.panel {
+  background-color: var(--color-surface);
+  border-radius: var(--border-radius-md);
+  border: var(--border-width) solid #e0e0e0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+  margin-bottom: var(--spacing-md);
+}
+.panel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.panel:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-dark));
+  color: var(--color-text-inverse);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: var(--border-width) solid var(--color-primary-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-header h2 {
+  font-size: var(--font-size-lg);
+  margin: 0;
+  font-weight: 600;
+}
+
+.panel-content {
+  padding: var(--spacing-md);
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fafafa;
+}
+
+/* Panel with notification indicator */
+.panel.has-notification .panel-header {
+  background: linear-gradient(to right, var(--color-accent), var(--color-accent-dark));
+}

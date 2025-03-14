@@ -1,0 +1,524 @@
+/* Shop styles - Updated */
+.shop-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchase-controls {
+  margin-bottom: var(--spacing-md);
+  background-color: #f5f5f5;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.purchase-amount-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.purchase-amount-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.purchase-amount-button:hover {
+  background-color: #f0f0f0;
+}
+
+.purchase-amount-button.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary-dark);
+}
+
+.buildings-container {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Building item styles - Fixed layout */
+.building-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: var(--spacing-sm);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.building-item:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Generator row styling - Ensure proper flex layout */
+.generator-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.generator-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* Prevent flex items from overflowing */
+}
+
+.generators-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+  justify-content: flex-start; /* Start from the top */
+}
+
+.empty-generators {
+  order: -1; /* Ensure it's at the top */
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+}
+.generator-icon-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.generator-icon-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.generator-icon-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+/* Enhanced icon styles for generator categories */
+.category-basic .generator-icon {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.category-premium .generator-icon {
+  background-color: rgba(63, 81, 181, 0.1);
+}
+
+.category-special .generator-icon {
+  background-color: rgba(255, 152, 0, 0.1);
+}
+.generator-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 8px;
+  margin-right: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.generator-info {
+  flex: 1;
+  min-width: 0; /* Allow text to truncate if needed */
+  margin-right: var(--spacing-md);
+}
+
+.generator-name-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.generator-name {
+  font-weight: bold;
+  font-size: var(--font-size-md);
+  color: #333;
+  margin-right: var(--spacing-sm);
+}
+
+.generator-count {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.generator-production {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+}
+/* Add this to your styles/component.css file */
+
+/* Style for the generator count */
+.generator-count {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+/* Adjust the owned-generator layout */
+/* Add this to your styles/component.css file */
+
+/* Style for the generator count */
+.generator-count {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+  width: auto; /* Prevent stretching */
+}
+
+/* Adjust the owned-generator layout */
+.owned-generator {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.owned-generator:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.owned-generator .generator-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.owned-generator .generator-name {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}
+
+/* Create a flex container for the name and count */
+.owned-generator .name-count-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.owned-generator .generator-production {
+  color: #2a9d8f;
+  font-weight: 500;
+}
+/* Add this to your styles/component.css file */
+
+.generator-icon-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.generator-icon-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.generator-icon-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+/* Add some styling for the count based on generator category */
+.category-basic .generator-count {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #2e7d32;
+}
+
+.category-premium .generator-count {
+  background-color: rgba(63, 81, 181, 0.1);
+  color: #303f9f;
+}
+
+.category-special .generator-count {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #ef6c00;
+}
+
+/* Buy button styling - Ensure fixed width and positioning */
+.buy-button {
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevent button from shrinking */
+  align-self: center; /* Center vertically */
+}
+
+.buy-button:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.buy-button.disabled {
+  background: linear-gradient(to bottom, #aaa, #888);
+  cursor: not-allowed;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+/* Add feedback styles for purchase actions */
+.purchase-success {
+  animation: pulse 0.3s ease;
+}
+
+.purchase-error {
+  animation: shake 0.5s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+/* Generator category styling */
+.category-Basic .generator-icon {
+  background-color: rgba(29, 234, 115, 0);
+}
+
+.category-Premium .generator-icon {
+  background-color: #3f51b5;
+}
+
+.category-Special .generator-icon {
+  background-color: #FF9800;
+}
+
+/* Tooltip styling improvements */
+.tooltip-header {
+  font-size: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding-bottom: 8px;
+}
+
+.tooltip-count {
+  font-weight: normal;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.tooltip-description {
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.tooltip-section {
+  margin-bottom: 10px;
+}
+
+.tooltip-section-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.tooltip-production, .tooltip-costs {
+  font-size: 13px;
+}
+
+.tooltip-production-item, .tooltip-cost-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.tooltip-label {
+  margin-right: 10px;
+}
+
+.tooltip-value {
+  font-weight: 500;
+}
+
+.affordable .tooltip-value {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+/* Game menu styling */
+.game-menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 8px;
+  background-color: #f0f9f0;
+  border-radius: 8px;
+  border: 1px solid #c8e6c9;
+}
+
+.menu-button {
+  flex: 1;
+  padding: 8px 12px;
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-dark));
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.menu-button:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-button:active {
+  transform: translateY(0);
+}
+
+/* Modal styling adjustments */
+.modal-content {
+  min-width: 300px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.stats-modal .production-stats {
+  box-shadow: none;
+  border: none;
+  margin: 0;
+}
+
+.modal-close {
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.save-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.save-notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+/* Super goofy progress indicators */
+.owned-generator {
+  background: linear-gradient(to right, #ffffff, #f0f8f0);
+  border-left: 4px solid transparent;
+  transition: border-left-color 0.3s ease, background 0.3s ease;
+}
+
+.owned-generator[data-count="0"] {
+  border-left-color: #ccc;
+  background: linear-gradient(to right, #ffffff, #f5f5f5);
+}
+
+.owned-generator[data-count="1"] {
+  border-left-color: #A5D6A7;
+}
+
+.owned-generator[data-count="5"] {
+  border-left-color: #81C784;
+}
+
+.owned-generator[data-count="10"] {
+  border-left-color: #66BB6A;
+}
+
+.owned-generator[data-count="25"] {
+  border-left-color: #4CAF50;
+}
+
+.owned-generator[data-count="50"] {
+  border-left-color: #43A047;
+  background: linear-gradient(to right, #f8fff8, #e8f5e9);
+}
+
+.owned-generator[data-count="100"] {
+  border-left-color: #2E7D32;
+  background: linear-gradient(to right, #f0fff0, #c8e6c9);
+}
