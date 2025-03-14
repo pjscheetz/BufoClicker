@@ -1,0 +1,620 @@
+[
+  {
+    "id": "first_bufo",
+    "name": "Baby's First Bufo",
+    "description": "Earn your first bufo by clicking",
+    "flavorText": "Every journey begins with a single click!",
+    "category": "clicks",
+    "order": 1,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 1
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.1,
+      "description": "+10% Click Power"
+    }
+  },
+  {
+    "id": "click_10",
+    "name": "Clicking Enthusiast",
+    "description": "Click 10 times",
+    "flavorText": "Those fingers are getting a workout!",
+    "category": "clicks",
+    "order": 2,
+    "requirement": {
+      "type": "clickCount",
+      "value": 10
+    }
+  },
+  {
+    "id": "click_100",
+    "name": "Click Master",
+    "description": "Click 100 times",
+    "flavorText": "Your clicking abilities are becoming legendary.",
+    "category": "clicks",
+    "order": 3,
+    "requirement": {
+      "type": "clickCount",
+      "value": 100
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.1,
+      "description": "+10% Click Power"
+    }
+  },
+  {
+    "id": "click_1000",
+    "name": "The Mad Clicker",
+    "description": "Click 1,000 times",
+    "flavorText": "Your mouse is begging for mercy!",
+    "category": "clicks",
+    "order": 4,
+    "requirement": {
+      "type": "clickCount",
+      "value": 1000
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.5,
+      "description": "+50% Click Power"
+    }
+  },
+  {
+    "id": "click_10000",
+    "name": "Digital Percussionist",
+    "description": "Click 10,000 times",
+    "flavorText": "Your finger rhythm could earn you a spot in a bufo band!",
+    "category": "clicks",
+    "order": 5,
+    "requirement": {
+      "type": "clickCount",
+      "value": 10000
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 10000,
+      "description": "Bonus 10,000 Bufos"
+    }
+  },
+  {
+    "id": "first_generator",
+    "name": "Bufo Farmer",
+    "description": "Buy your first bufo producer",
+    "flavorText": "Why click when bufos can do the work for you?",
+    "category": "generators",
+    "order": 1,
+    "requirement": {
+      "type": "totalGenerators",
+      "value": 1
+    }
+  },
+  {
+    "id": "10_generators",
+    "name": "Bufo Squad",
+    "description": "Own 10 bufo producers",
+    "flavorText": "Your bufo squad grows!",
+    "category": "generators",
+    "order": 2,
+    "requirement": {
+      "type": "totalGenerators",
+      "value": 10
+    },
+    "reward": {
+      "type": "productionBoost",
+      "value": 1.05,
+      "description": "+5% Production to all Bufos"
+    }
+  },
+  {
+    "id": "50_generators",
+    "name": "Bufo Legion",
+    "description": "Own 50 bufo producers",
+    "flavorText": "Your bufo legion expands!",
+    "category": "generators",
+    "order": 3,
+    "requirement": {
+      "type": "totalGenerators",
+      "value": 50
+    },
+    "reward": {
+      "type": "productionBoost",
+      "value": 1.05,
+      "description": "+5% Production to all Bufos"
+    }
+  },
+  {
+    "id": "100_generators",
+    "name": "Bufo Empire",
+    "description": "Own 100 bufo producers",
+    "flavorText": "Your bufo empire reaches far and wide!",
+    "category": "generators",
+    "order": 4,
+    "requirement": {
+      "type": "totalGenerators",
+      "value": 100
+    },
+    "reward": {
+      "type": "productionBoost",
+      "value": 1.1,
+      "description": "+10% Production to all Bufos"
+    }
+  },
+  {
+    "id": "tadpole_25",
+    "name": "Tadpole Tycoon",
+    "description": "Own 25 Bufo Tadpoles",
+    "flavorText": "Look at all those wiggly friends!",
+    "category": "generators",
+    "order": 10,
+    "requirement": {
+      "type": "generatorType",
+      "target": "tadpole",
+      "value": 25
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "tadpole",
+      "value": 2,
+      "description": "2x Tadpole Production"
+    }
+  },
+  {
+    "id": "froglet_25",
+    "name": "Froglet Fanatic",
+    "description": "Own 25 Bufo Froglets",
+    "flavorText": "They're growing up so fast!",
+    "category": "generators",
+    "order": 11,
+    "requirement": {
+      "type": "generatorType",
+      "target": "froglet",
+      "value": 25
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "froglet",
+      "value": 2,
+      "description": "2x Froglet Production"
+    }
+  },
+  {
+    "id": "bufo_25",
+    "name": "Pond Master",
+    "description": "Own 25 Pond Bufos",
+    "flavorText": "Your ponds are teeming with productive amphibians!",
+    "category": "generators",
+    "order": 12,
+    "requirement": {
+      "type": "generatorType",
+      "target": "bufo",
+      "value": 25
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "bufo",
+      "value": 2,
+      "description": "2x Pond Bufo Production"
+    }
+  },
+  {
+    "id": "giant_bufo_15",
+    "name": "Giant Enthusiast",
+    "description": "Own 15 Giant Bufos",
+    "flavorText": "These massive amphibians require a lot of space!",
+    "category": "generators",
+    "order": 13,
+    "requirement": {
+      "type": "generatorType",
+      "target": "giant_bufo",
+      "value": 15
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "giant_bufo",
+      "value": 2,
+      "description": "2x Giant Bufo Production"
+    }
+  },
+  {
+    "id": "chromatic_bufo_10",
+    "name": "Color Collector",
+    "description": "Own 10 Chromatic Bufos",
+    "flavorText": "Your collection is becoming quite colorful!",
+    "category": "generators",
+    "order": 14,
+    "requirement": {
+      "type": "generatorType",
+      "target": "chromatic_bufo",
+      "value": 10
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "chromatic_bufo",
+      "value": 2,
+      "description": "2x Chromatic Bufo Production"
+    }
+  },
+  {
+    "id": "canopy_bufo_10",
+    "name": "Treetop Supervisor",
+    "description": "Own 10 Canopy Bufos",
+    "flavorText": "Your vertical bufo operation is reaching new heights!",
+    "category": "generators",
+    "order": 15,
+    "requirement": {
+      "type": "generatorType",
+      "target": "canopy_bufo",
+      "value": 10
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "canopy_bufo",
+      "value": 2,
+      "description": "2x Canopy Bufo Production"
+    }
+  },
+  {
+    "id": "prosperity_bufo_7",
+    "name": "Fortune Favorer",
+    "description": "Own 7 Prosperity Bufos",
+    "flavorText": "The more you have, the luckier you get!",
+    "category": "generators",
+    "order": 16,
+    "requirement": {
+      "type": "generatorType",
+      "target": "prosperity_bufo",
+      "value": 7
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "prosperity_bufo",
+      "value": 2,
+      "description": "2x Prosperity Bufo Production"
+    }
+  },
+  {
+    "id": "golden_bufo_5",
+    "name": "Midas Touch",
+    "description": "Own 5 Golden Bufos",
+    "flavorText": "Everything they touch turns to... more bufos!",
+    "category": "generators",
+    "order": 17,
+    "requirement": {
+      "type": "generatorType",
+      "target": "golden_bufo",
+      "value": 5
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "golden_bufo",
+      "value": 2,
+      "description": "2x Golden Bufo Production"
+    }
+  },
+  {
+    "id": "cosmic_bufo_3",
+    "name": "Cosmic Explorer",
+    "description": "Own 3 Cosmic Bufos",
+    "flavorText": "Your bufo empire extends beyond the stars!",
+    "category": "generators",
+    "order": 18,
+    "requirement": {
+      "type": "generatorType",
+      "target": "cosmic_bufo",
+      "value": 3
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "cosmic_bufo",
+      "value": 2,
+      "description": "2x Cosmic Bufo Production"
+    }
+  },
+  {
+    "id": "ancient_bufo_3",
+    "name": "Archeologist",
+    "description": "Own 3 Ancient Bufos",
+    "flavorText": "These primordial beings have many secrets to share!",
+    "category": "generators",
+    "order": 19,
+    "requirement": {
+      "type": "generatorType",
+      "target": "ancient_bufo",
+      "value": 3
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "ancient_bufo",
+      "value": 2,
+      "description": "2x Ancient Bufo Production"
+    }
+  },
+  {
+    "id": "quantum_bufo_2",
+    "name": "Quantum Physicist",
+    "description": "Own 2 Quantum Bufos",
+    "flavorText": "You're now operating beyond conventional physics!",
+    "category": "generators",
+    "order": 20,
+    "requirement": {
+      "type": "generatorType",
+      "target": "quantum_bufo",
+      "value": 2
+    },
+    "reward": {
+      "type": "generatorBoost",
+      "target": "quantum_bufo",
+      "value": 2,
+      "description": "2x Quantum Bufo Production"
+    }
+  },
+  {
+    "id": "bufos_100",
+    "name": "Bufo Beginner",
+    "description": "Earn 100 total bufos",
+    "flavorText": "Building that bufo bank!",
+    "category": "production",
+    "order": 1,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 100
+    }
+  },
+  {
+    "id": "bufos_1000",
+    "name": "Bufo Collector",
+    "description": "Earn 1,000 total bufos",
+    "flavorText": "Your bufo collection is growing nicely!",
+    "category": "production",
+    "order": 2,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 1000
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 500,
+      "description": "Bonus 500 Bufos"
+    }
+  },
+  {
+    "id": "bufos_10000",
+    "name": "Bufo Hoarder",
+    "description": "Earn 100,000 total bufos",
+    "flavorText": "You're swimming in bufos!",
+    "category": "production",
+    "order": 3,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 100000
+    }
+  },
+  {
+    "id": "bufos_100000",
+    "name": "Bufo Magnate",
+    "description": "Earn 1,000,000 total bufos",
+    "flavorText": "Your bufo empire is truly impressive!",
+    "category": "production",
+    "order": 4,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 1000000
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 10000,
+      "description": "Bonus 10,000 Bufos"
+    }
+  },
+  {
+    "id": "bufos_1000000",
+    "name": "Bufo Billionaire",
+    "description": "Earn 1,000,000,000 total bufos",
+    "flavorText": "You could swim in your bufo vault like a certain wealthy duck!",
+    "category": "production",
+    "order": 5,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 1000000000
+    }
+  },
+  {
+    "id": "bufos_10000000",
+    "name": "Bufo Trillionaire",
+    "description": "Earn 1,000,000,000,000 total bufos",
+    "flavorText": "Your wealth is beyond comprehension!",
+    "category": "production",
+    "order": 6,
+    "requirement": {
+      "type": "totalBufos",
+      "value": 1000000000000
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 1000000,
+      "description": "Bonus 1,000,000 Bufos"
+    }
+  },
+  {
+    "id": "production_10",
+    "name": "Passive Income",
+    "description": "Reach 10 bufos per second production",
+    "flavorText": "Watch those bufos roll in!",
+    "category": "production",
+    "order": 10,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 10
+    }
+  },
+  {
+    "id": "production_100",
+    "name": "Bufo Factory",
+    "description": "Reach 100 bufos per second production",
+    "flavorText": "Your bufo factory is running at full capacity!",
+    "category": "production",
+    "order": 11,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 100
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.25,
+      "description": "+25% Click Power"
+    }
+  },
+  {
+    "id": "production_1000",
+    "name": "Bufo Industrialist",
+    "description": "Reach 1,000 bufos per second production",
+    "flavorText": "You've industrialized bufo production!",
+    "category": "production",
+    "order": 12,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 1000
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.5,
+      "description": "+50% Click Power"
+    }
+  },
+  {
+    "id": "production_10000",
+    "name": "Bufo Conglomerate",
+    "description": "Reach 10,000 bufos per second production",
+    "flavorText": "Your bufo business spans continents!",
+    "category": "production",
+    "order": 13,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 10000
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.5,
+      "description": "+50% Click Power"
+    }
+  },
+  {
+    "id": "production_100000",
+    "name": "Bufo Monopoly",
+    "description": "Reach 100,000 bufos per second production",
+    "flavorText": "You control the entire bufo market!",
+    "category": "production",
+    "order": 14,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 100000
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.5,
+      "description": "+50% Click Power"
+    }
+  },
+  {
+    "id": "production_1000000",
+    "name": "Bufo Multiverse",
+    "description": "Reach 1,000,000 bufos per second production",
+    "flavorText": "Your bufo production transcends dimensions!",
+    "category": "production",
+    "order": 15,
+    "requirement": {
+      "type": "bufosPerSecond",
+      "value": 1000000
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.5,
+      "description": "+50% Click Power"
+    }
+  },
+  {
+    "id": "console_opened",
+    "name": "Curious Developer",
+    "description": "Open the developer console",
+    "flavorText": "Peeking behind the curtain, are we?",
+    "category": "special",
+    "secret": true,
+    "requirement": {
+      "type": "consoleOpened",
+      "value": 1
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 1000,
+      "description": "Bonus 1000 Bufos"
+    }
+  },
+  {
+    "id": "first_upgrade",
+    "name": "Upgrade Novice",
+    "description": "Purchase your first upgrade",
+    "flavorText": "The first of many improvements!",
+    "category": "special",
+    "requirement": {
+      "type": "upgradeCount",
+      "value": 1
+    }
+  },
+  {
+    "id": "upgrade_5",
+    "name": "Upgrade Enthusiast",
+    "description": "Purchase 5 upgrades",
+    "flavorText": "Your bufo operation is really coming together!",
+    "category": "special",
+    "requirement": {
+      "type": "upgradeCount",
+      "value": 5
+    },
+    "reward": {
+      "type": "clickBoost",
+      "value": 1.25,
+      "description": "+25% Click Power"
+    }
+  },
+  {
+    "id": "upgrade_10",
+    "name": "Upgrade Specialist",
+    "description": "Purchase 10 upgrades",
+    "flavorText": "You really know how to maximize your bufo potential!",
+    "category": "special",
+    "requirement": {
+      "type": "upgradeCount",
+      "value": 10
+    }
+  },
+  {
+    "id": "upgrade_25",
+    "name": "Upgrade Master",
+    "description": "Purchase 25 upgrades",
+    "flavorText": "Your bufo operation is a fine-tuned machine!",
+    "category": "special",
+    "requirement": {
+      "type": "upgradeCount",
+      "value": 25
+    },
+    "reward": {
+      "type": "bufoBonus",
+      "value": 50000,
+      "description": "Bonus 50,000 Bufos"
+    }
+  },
+  {
+    "id": "upgrade_50",
+    "name": "Upgrade Legend",
+    "description": "Purchase 50 upgrades",
+    "flavorText": "Your optimization skills are unmatched in the bufo world!",
+    "category": "special",
+    "requirement": {
+      "type": "upgradeCount",
+      "value": 50
+    }
+  }
+]

@@ -1,0 +1,87 @@
+/* Animation styles */
+
+/* Smooth fade in */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
+  
+  /* Smooth fade out */
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+  
+  .fade-out {
+    animation: fadeOut 0.3s ease-out forwards;
+  }
+  
+  /* Pulse animation (subtle) */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  .pulse {
+    animation: pulse 0.3s ease-in-out;
+  }
+  
+  /* Floating number animation (for click feedback) */
+  @keyframes floatUp {
+    0% { 
+      opacity: 0;
+      transform: translateY(0);
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0.8;
+    }
+    100% { 
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+  }
+  
+  .floating-number {
+    animation: floatUp 1.5s ease-out forwards;
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  /* Click ripple effect */
+  @keyframes ripple {
+    0% { 
+      transform: scale(0);
+      opacity: 0.8;
+    }
+    100% { 
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+  
+  .click-indicator {
+    animation: ripple 0.6s ease-out forwards;
+    background-color: rgba(76, 175, 80, 0.2);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  
+  /* Hover lift effect (subtle, replaces bounce) */
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
