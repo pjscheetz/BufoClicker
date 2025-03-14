@@ -249,57 +249,72 @@ export interface AnimationOptions {
     });
   }
   
-  /**
-   * Creates a pulse animation on an element
-   * @param element - The element to animate
-   * @param scale - Maximum scale factor (default: 1.05)
-   * @param duration - Animation duration in milliseconds (default: 600)
-   * @returns Promise that resolves when animation completes
-   */
-  export function pulse(
-    element: HTMLElement, 
-    scale: number = 1.05, 
-    duration: number = 600
-  ): Promise<void> {
-    if (!element) {
-      return Promise.reject(new Error('Element is required'));
-    }
-    
-    // Store original transform
-    const originalTransform = element.style.transform || '';
-    
-    // Create half-duration animations for pulse up and down
-    const halfDuration = duration / 2;
-    
-    return animate(
-      halfDuration,
-      (progress) => {
-        // Scale up from 1 to scale
-        const currentScale = 1 + (scale - 1) * progress;
-        element.style.transform = `${originalTransform} scale(${currentScale})`;
-      },
-      { 
-        easing: Easing.easeOut,
-        onComplete: () => {
-          // Scale back down
-          animate(
-            halfDuration,
-            (progress) => {
-              const currentScale = scale - (scale - 1) * progress;
-              element.style.transform = `${originalTransform} scale(${currentScale})`;
-            },
-            { 
-              easing: Easing.easeIn,
-              onComplete: () => {
-                // Reset to original
-                element.style.transform = originalTransform;
-              }
-            }
-          );
-        }
-      }
-    );
+/**
+ * Creates a pulse animation on an element
+ * @param element - The element to animate
+ * @param scale - Maximum scale factor (default: 1.05)
+ * @param duration - Animation duration in milliseconds (default: 600)
+ * @returns Promise that resolves when animation completes
+ */
+/**
+ * Creates a pulse animation on an element
+ * @param element - The element to animate
+ * @param scale - Maximum scale factor (default: 1.05)
+ * @param duration - Animation duration in milliseconds (default: 600)
+ * @returns Promise that resolves when animation completes
+ */
+export function pulse(
+  element: HTMLElement, 
+  scale: number = 1.05, 
+  duration: number = 600
+): Promise<void> {
+  if (!element) {
+    return Promise.reject(new Error('Element is required'));
   }
+  
+  // Cancel any existing animations by adding a data attribute
+  if (element.dataset.animating === 'true') {
+    // Already animating, abort to prevent overlapping animations
+    return Promise.resolve();
+  }
+  element.dataset.animating = 'true';
+  
+  // Always reset to scale 1 at the start to prevent accumulation
+  element.style.transform = '';
+  
+  // Create half-duration animations for pulse up and down
+  const halfDuration = duration / 2;
+  
+  return animate(
+    halfDuration,
+    (progress) => {
+      // Scale up from 1 to scale
+      const currentScale = 1 + (scale - 1) * progress;
+      element.style.transform = `scale(${currentScale})`;
+    },
+    { 
+      easing: Easing.easeOut,
+      onComplete: () => {
+        // Scale back down
+        animate(
+          halfDuration,
+          (progress) => {
+            const currentScale = scale - (scale - 1) * progress;
+            element.style.transform = `scale(${currentScale})`;
+          },
+          { 
+            easing: Easing.easeIn,
+            onComplete: () => {
+              // Reset transform and animation state when done
+              element.style.transform = '';
+              element.dataset.animating = 'false';
+            }
+          }
+        );
+      }
+    }
+  );
+}
   
   /**
    * Creates a shake animation on an element
