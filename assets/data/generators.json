@@ -166,7 +166,7 @@
       { "type": "bufos", "value": 50000000 }
     ],
     "unlocked": false,
-    "enabled": false,
+    "enabled": true,
     "boosts": []
   },
   "cosmic_bufo": {
@@ -185,10 +185,10 @@
     "costMultiplier": 1.55,
     "unlockRequirements": [
       { "type": "bufos", "value": 500000000 },
-      { "type": "generators", "value": 25, "target": "golden_bufo" }
+      { "type": "generators", "value": 10, "target": "golden_bufo" }
     ],
     "unlocked": false,
-    "enabled": false,
+    "enabled": true,
     "boosts": []
   },
   "ancient_bufo": {
@@ -207,10 +207,10 @@
     "costMultiplier": 1.6,
     "unlockRequirements": [
       { "type": "bufos", "value": 5000000000 },
-      { "type": "generators", "value": 15, "target": "cosmic_bufo" }
+      { "type": "generators", "value": 10, "target": "cosmic_bufo" }
     ],
     "unlocked": false,
-    "enabled": false,
+    "enabled": true,
     "boosts": []
   },
   "quantum_bufo": {
@@ -232,7 +232,7 @@
       { "type": "generators", "value": 10, "target": "ancient_bufo" }
     ],
     "unlocked": false,
-    "enabled": false,
+    "enabled": true,
     "boosts": []
   }
 }

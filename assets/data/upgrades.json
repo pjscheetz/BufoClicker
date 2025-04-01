@@ -429,17 +429,16 @@
   {
     "id": "tadpole_froglet_synergy",
     "name": "Growth Spurt",
-    "description": "Tadpoles boost Froglet production by 0.1% per Tadpole",
+    "description": "Tadpoles boost Froglet production by 2x",
     "flavorText": "The circle of life! Tadpoles inspire Froglets with tales of their imminent metamorphosis. Motivational!",
-    "category": "synergy",
+    "category": "generator",
     "cost": 5000,
     "iconPath": "./assets/images/upgrades/bufo-gets-whiplash.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "tadpole",
+        "type": "generatorProduction",
         "target": "froglet",
-        "bonus": 0.001
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -458,17 +457,16 @@
   {
     "id": "froglet_bufo_synergy",
     "name": "Bufo Mentorship",
-    "description": "Froglets boost Pond Bufo production by 0.1% per Froglet",
+    "description": "Froglets boost Pond Bufo production by 2x",
     "flavorText": "Each Bufo adopts a Froglet apprentice. The young ones are eager to please their mentors!",
-    "category": "synergy",
+    "category": "generator",
     "cost": 50000,
     "iconPath": "./assets/images/upgrades/bufo-gets-whiplash.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "froglet",
+        "type": "generatorProduction",
         "target": "bufo",
-        "bonus": 0.001
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -487,17 +485,16 @@
   {
     "id": "chromatic_canopy_synergy",
     "name": "Colorful Canopy",
-    "description": "Chromatic Bufos boost Canopy Bufo production by 0.2% per Chromatic Bufo",
+    "description": "Chromatic Bufos boost Canopy Bufo production by 2x",
     "flavorText": "Canopy Bufos coated in trace amounts of chromatic patterns become surprisingly productive. Science can't explain it!",
-    "category": "synergy",
+    "category": "generator",
     "cost": 500000000,
     "iconPath": "./assets/images/upgrades/bufo-gets-whiplash.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "chromatic_bufo",
+        "type": "generatorProduction",
         "target": "canopy_bufo",
-        "bonus": 0.002
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -542,17 +539,16 @@
   {
     "id": "bufo_choir",
     "name": "Bufo Choir",
-    "description": "Pond Bufo production increases by 0.5% for each Giant Bufo",
+    "description": "Giant Bufos inspire Bufo production by 2x",
     "flavorText": "The Giant Bufos' deep croaks provide the perfect bass line for your Bufo choir. It's a smash hit on the amphibian charts!",
-    "category": "synergy",
+    "category": "generator",
     "cost": 250000,
     "iconPath": "./assets/images/upgrades/bufo-simba.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "giant_bufo",
+        "type": "generatorProduction",
         "target": "bufo",
-        "bonus": 0.005
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -571,17 +567,16 @@
   {
     "id": "golden_prosperity_synergy",
     "name": "Gilded Prosperity",
-    "description": "Golden Bufos boost Prosperity Bufo production by 0.5% per Golden Bufo",
+    "description": "Golden Bufos boost Prosperity Bufo production by 2x",
     "flavorText": "When golden dust meets prosperity, magic happens. Your prosperity bufos are developing gold-flecked skin and inflated egos.",
-    "category": "synergy",
+    "category": "generator",
     "cost": 5000000000,
     "iconPath": "./assets/images/upgrades/bufo-dapper.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "golden_bufo",
+        "type": "generatorProduction",
         "target": "prosperity_bufo",
-        "bonus": 0.005
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -600,17 +595,16 @@
   {
     "id": "cosmic_quantum_synergy",
     "name": "Interdimensional Harmony",
-    "description": "Cosmic Bufos boost Quantum Bufo production by 1% per Cosmic Bufo",
+    "description": "Cosmic Bufos boost Quantum Bufo production by 2x",
     "flavorText": "The cosmic energy channeled by your stellar amphibians enhances the quantum field manipulations of your reality-bending bufos.",
-    "category": "synergy",
+    "category": "generator",
     "cost": 50000000000,
     "iconPath": "./assets/images/upgrades/bufo-universe.png",
     "effects": [
       {
-        "type": "generatorSynergy",
-        "source": "cosmic_bufo",
+        "type": "generatorProduction",
         "target": "quantum_bufo",
-        "bonus": 0.01
+        "multiplier": 2
       }
     ],
     "unlockConditions": [
@@ -629,16 +623,15 @@
   {
     "id": "bufo_college",
     "name": "Bufo College",
-    "description": "Increase all basic generator production by 2.5x",
+    "description": "Increase all basic production by 1.5x",
     "flavorText": "A prestigious institution where bufos earn their Lily Pads in Advanced Bufonomics. The graduation ceremony is quite the leap!",
     "category": "global",
     "cost": 7500000,
     "iconPath": "./assets/images/upgrades/bufo-glasses.png",
     "effects": [
       {
-        "type": "categoryMultiplier",
-        "category": "basic",
-        "multiplier": 2.5
+        "type": "globalMultiplier",
+        "multiplier": 1.5
       }
     ],
     "unlockConditions": [
@@ -651,16 +644,15 @@
   {
     "id": "premium_pond",
     "name": "Premium Pond",
-    "description": "Increase production of premium generators by 3x",
+    "description": "Increase production by 1.5x",
     "flavorText": "A luxurious habitat with filtered water and gourmet flies. Only the most distinguished bufos are allowed entry.",
     "category": "global",
     "cost": 75000000,
     "iconPath": "./assets/images/upgrades/bufo-gives-money.png",
     "effects": [
       {
-        "type": "categoryMultiplier",
-        "category": "premium",
-        "multiplier": 3
+        "type": "globalMultiplier",
+        "multiplier": 1.5
       }
     ],
     "unlockConditions": [
@@ -803,7 +795,7 @@
   {
     "id": "bufo_boost_3",
     "name": "Bufonic Plague",
-    "description": "Increase Pond Bufo production by 5x",
+    "description": "Increase Bufo production by 5x",
     "flavorText": "A benevolent epidemic sweeping through your bufo population. It makes them ridiculously productive and slightly more dramatic.",
     "category": "generator",
     "cost": 500000000,
@@ -1172,15 +1164,15 @@
     {
       "id": "bufo_academy",
       "name": "Bufo Academy",
-      "description": "Unlock special training for basic generators, increasing their production by 3x",
+      "description": "Unlock special training for bufos, increasing their production by 3x",
       "flavorText": "An elite educational institution where young bufos learn advanced bufo-production techniques. Graduation rates are high, but so are the standards.",
-      "category": "global",
+      "category": "generator",
       "cost": 75000000,
       "iconPath": "./assets/images/upgrades/bufo-glasses.png",
       "effects": [
         {
-          "type": "unlockSpecial",
-          "target": "basic_training",
+          "type": "generatorProduction",
+          "target": "bufo",
           "multiplier": 3
         }
       ],
@@ -1240,7 +1232,7 @@
     {
       "id": "global_production_4",
       "name": "Bufo Utopia",
-      "description": "Increase all generator production by 2x",
+      "description": "Increase all production by 2x",
       "flavorText": "Your bufo society has reached a state of perfect harmony. The croaks of your bufos create a symphony of productivity that echoes through the ages.",
       "category": "global",
       "cost": 5000000000,
@@ -1261,23 +1253,23 @@
     {
       "id": "tadpole_boost_4",
       "name": "Quantum Leap",
-      "description": "Increase Bufo Tadpole production by 10x",
-      "flavorText": "Your tadpoles have mastered the art of quantum hopping. They're now producing bufos in parallel universes, and the results are staggering!",
+      "description": "Increase Bufo production by 10x",
+      "flavorText": "Your bufos have mastered the art of quantum hopping. They're now producing bufos in parallel universes, and the results are staggering!",
       "category": "generator",
       "cost": 100000000,
       "iconPath": "./assets/images/upgrades/bufo-gives-star.png",
       "effects": [
         {
           "type": "generatorProduction",
-          "target": "tadpole",
+          "target": "bufo",
           "multiplier": 10
         }
       ],
       "unlockConditions": [
         {
           "type": "generatorCount",
-          "target": "tadpole",
-          "value": 200
+          "target": "bufo",
+          "value": 100
         }
       ]
     },
